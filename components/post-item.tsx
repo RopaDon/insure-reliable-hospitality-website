@@ -1,39 +1,33 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import PostDate from '@/components/post-date'
-import PostTags from './post-tags'
 
 export default function PostItem({ ...props }) {
   return (
-    <article className="flex flex-col h-full" data-aos="fade-up">
-      <header>
-        {props.image &&
-          <Link href={`/blog/${props.slug}`} className="block mb-6">
-            <figure className="relative h-0 pb-9/16 overflow-hidden rounded-sm">
-              <Image className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src={props.image} width={352} height={198} alt={props.title} />
-            </figure>
-          </Link>
-        }
-        {props.tags &&
-          <div className="mb-3">
-            <PostTags tags={props.tags} />
-          </div>
-        }
-        <h3 className="h4 mb-2">
-          <Link href={`/blog/${props.slug}`} className="hover:text-gray-100 transition duration-150 ease-in-out">{props.title}</Link>
-        </h3>
-      </header>
-      <p className="text-lg text-gray-400 grow">{props.summary}</p>
-      <footer className="flex items-center mt-4">
-        <Link href="#">
-          <img className="rounded-full shrink-0 mr-4" src={props.authorImg} width={40} height={40} alt={props.author} />
+    <article className="h-full flex flex-col space-y-5" data-aos="fade-up">
+      {props.image &&
+        <Link className="block group overflow-hidden" href={`/blog/${props.slug}`}>
+          <img className="w-full aspect-[16/9] md:aspect-[27/17] object-cover group-hover:scale-105 transition duration-700 ease-out" src={props.image} width={540} height={340} alt={props.title} />
         </Link>
-        <div className="font-medium">
-          <Link href="#" className="text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out">{props.author}</Link>
-          <span className="text-gray-700"> - </span>
-          <span className="text-gray-500"><PostDate dateString={props.publishedAt} /></span>
-        </div>
-      </footer>
-    </article>  
+      }
+      <div className="grow flex flex-col">
+        <header>
+          <h3 className="h4 font-playfair-display mb-3">
+            <Link className="text-slate-800 hover:underline hover:decoration-blue-100" href={`/blog/${props.slug}`}>{props.title}</Link>
+          </h3>
+        </header>
+        <p className="text-lg text-slate-500 grow">{props.summary}</p>
+        <footer className="flex items-center mt-4">
+          <a href="#0">
+            <Image className="rounded-full shrink-0 mr-3" src={props.authorImg} width={32} height={32} alt={props.author} />
+          </a>
+          <div>
+            <a className="font-medium text-slate-800 hover:text-blue-600 transition duration-150 ease-in-out" href="#0">{props.author}</a>
+            <span className="text-slate-300"> · </span>
+            <span className="text-slate-500"><PostDate dateString={props.publishedAt} /></span>
+          </div>
+        </footer>
+      </div>
+    </article>
   )
 }

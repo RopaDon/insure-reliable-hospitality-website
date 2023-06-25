@@ -2,7 +2,7 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
-  filePathPattern: `blog/**/*.mdx`,
+  filePathPattern: `**/*.mdx`,
   contentType: 'mdx',
   fields: {
     title: {
@@ -25,49 +25,20 @@ const Post = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    tags: {
-      type: 'list',
-      of: { type: 'string' },
-    },
     image: {
       type: 'string',
-    },        
-  },
-  computedFields: {
-    slug: {
-      type: 'string',
-      resolve: (doc) => doc._raw.flattenedPath.replace(/blog\/?/, ''),
+      required: true,
     },    
   },
-}))
-
-const Help = defineDocumentType(() => ({
-  name: 'Help',
-  filePathPattern: `help/**/*.mdx`,
-  contentType: 'mdx',
-  fields: {
-    title: {
-      type: 'string',
-      required: true
-    },
-    updatedAt: {
-      type: 'date',
-      required: true
-    },
-    summary: {
-      type: 'string',
-      required: true,
-    },
-  },
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => doc._raw.flattenedPath.replace(/help\/?/, ''),
-    },
+      resolve: (doc) => doc._raw.flattenedPath,
+    },    
   },
 }))
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Post, Help],
+  documentTypes: [Post],
 })

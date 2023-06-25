@@ -1,28 +1,26 @@
 export const metadata = {
-  title: 'About us - Open PRO',
+  title: 'About',
   description: 'Page description',
 }
 
-import HeroAbout from '@/components/hero-about'
-import TeamImages from '@/components/team-images'
-import Timeline from '@/components/timeline'
+import Hero from '@/components/hero-about'
+import Stats from '@/components/stats-02'
+import Content from './content'
 import Team from '@/components/team'
-import TestimonialsCarousel from '@/components/testimonials-carousel'
-import Career from '@/components/career'
-import Clients from '@/components/clients'
-import Newsletter from '@/components/newsletter'
+import TeamMembers from '@/components/team-members'
+import Clients from '@/components/clients-02'
+import Cta from '@/components/cta-02'
 
 export default function About() {
   return (
     <>
-      <HeroAbout />
-      <TeamImages />
-      <Timeline />
+      <Hero />
+      <Stats />
+      <Content />
       <Team />
-      <TestimonialsCarousel />
-      <Career />
+      <TeamMembers />
       <Clients />
-      <Newsletter />
+      <Cta />
     </>
   )
 }
