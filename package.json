@@ -5,8 +5,8 @@
   "scripts": {
     "lint": "next lint",
     "build": "next build",
-    "dev": "env-cmd -f .env.local next dev",
-    "start": "env-cmd -f .env.production next start"
+    "dev": "NODE_ENV=development next dev",
+    "start": "NODE_ENV=production next start"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

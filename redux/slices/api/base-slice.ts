@@ -1,10 +1,11 @@
+import { getDomain } from "@/components/utils/utils";
 import { BaseQueryFn, FetchArgs, fetchBaseQuery, FetchBaseQueryError } from "@reduxjs/toolkit/dist/query";
 
 export const baseQuery = fetchBaseQuery({
   validateStatus(response, body) {
     return [200, 201, 400, 409, 404, 401].includes(response.status);
   },
-  baseUrl: process.env.NEXT_PUBLIC_API_URL,
+  baseUrl: getDomain(),
   prepareHeaders: (headers, { getState, endpoint }) => {
     return headers;
   },
