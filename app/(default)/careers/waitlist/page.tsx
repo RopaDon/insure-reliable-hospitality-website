@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Waitlist",
-  description: "Page description",
+  description: "",
 };
 
 import WaitlistForm from "./waitlist-form";

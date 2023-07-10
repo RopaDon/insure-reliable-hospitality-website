@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Home",
-  description: "Page description",
+  description: "",
 };
 
 import Hero from "@/app/(default)/home/hero-home";

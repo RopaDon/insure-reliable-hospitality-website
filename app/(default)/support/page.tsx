@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Support - Tidy",
-  description: "Page description",
+  description: "",
 };
 
 import Hero from "@/components/hero-support";

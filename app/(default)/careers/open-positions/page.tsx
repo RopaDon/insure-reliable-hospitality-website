@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Career - Open Positions",
-  description: "Page description",
+  description: "",
 };
 
 import Sidebar from "./sidebar";

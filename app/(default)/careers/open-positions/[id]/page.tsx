@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: { id: number } }): 
 
   return {
     title: post.title,
-    description: "Page description",
+    description: "",
   };
 }
 
