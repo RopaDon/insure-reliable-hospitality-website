@@ -24,8 +24,8 @@ export default function HomeFooter() {
             <div className="relative max-w-xl mx-auto px-4 sm:px-6">
               <div>
                 <div>
-                  <Link className="ml-40 btn text-white bg-blue-600 hover:bg-blue-700 group" href="/clients/partnership">
-                    Partner With Us
+                  <Link className="btn text-white bg-blue-600 hover:bg-blue-700 group" href="/clients/partnership">
+                    Explore Partnership
                     <span className="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
                   </Link>
                 </div>

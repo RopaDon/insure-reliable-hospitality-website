@@ -17,14 +17,11 @@ export default function AboutUsClient() {
                   <p className="text-md text-slate-400 mb-8">
                     We are always open to talk to great people who want to help us shape the future of work, and we have job openings all over the world.
                   </p>
-                  <div>
-                    <a className="btn text-white bg-blue-600 hover:bg-blue-700 group" href="/clients/partnership">
-                      Partner with us
-                      <span className="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                        -&gt;
-                      </span>
-                    </a>
-                  </div>
+                  <a className="btn text-white bg-blue-600 hover:bg-blue-700 group" href="/clients/partnership">
+                    Explore Partnership
+                    <span className="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                  </a>
+                  <div></div>
                 </div>
               </div>
             </div>

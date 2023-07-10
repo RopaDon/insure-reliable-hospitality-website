@@ -25,7 +25,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-inter antialiased bg-white text-slate-800 tracking-tight`}>
-        {" "}
         <ReduxProvider>
           <Toaster toastOptions={toastOptions} />
           {children} <Toaster />
