@@ -1,26 +1,24 @@
 export const metadata = {
-  title: 'About',
-  description: 'Page description',
-}
+  title: "About",
+  description: "Page description",
+};
 
-import Hero from '@/components/hero-about'
-import Stats from '@/components/stats-02'
-import Content from './content'
-import Team from '@/components/team'
-import TeamMembers from '@/components/team-members'
-import Clients from '@/components/clients-02'
-import Cta from '@/components/cta-02'
+import Hero from "./hero-about";
+import Content from "./content";
+import Team from "@/components/team";
+import Stats from "@/components/stats-02";
+import AboutUsClient from "./about-us-clients";
+import TeamMembers from "@/components/team-members";
 
 export default function About() {
   return (
     <>
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <Content />
       <Team />
       <TeamMembers />
-      <Clients />
-      <Cta />
+      <AboutUsClient />
     </>
-  )
+  );
 }

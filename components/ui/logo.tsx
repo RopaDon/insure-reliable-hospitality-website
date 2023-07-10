@@ -1,11 +1,16 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import LogoPng from '@/public/images/logo.png'
+import Link from "next/link";
+import Image from "next/image";
+import LogoWhite from "@/public/images/logo-white.png";
+import LogoBlack from "@/public/images/logo-black.png";
 
-export default function Logo() {
+type Props = {
+  isLight?: boolean;
+};
+
+export default function Logo({ isLight = true }: Props) {
   return (
     <Link href="/home" className="block text-blue-600 transition duration-150 ease-in-out" aria-label="Cruip">
-        <Image  src={LogoPng} width={35} height={32} alt="Avatar 03" />
+      <Image src={isLight ? LogoWhite : LogoBlack} width={35} height={32} alt="Avatar 03" />
     </Link>
-  )
+  );
 }

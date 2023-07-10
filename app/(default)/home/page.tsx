@@ -1,28 +1,24 @@
 export const metadata = {
-  title: 'Home',
-  description: 'Page description',
-}
+  title: "Home",
+  description: "Page description",
+};
 
-import Hero from '@/components/hero-home'
-import FeaturesBlocks from '@/components/features-blocks'
-import Features from '@/components/features-home'
-import Features02 from '@/components/features-home-02'
-import Features03 from '@/components/features-home-03'
-import Target from '@/components/target'
-import PricingSection from '@/components/pricing'
-import Cta from '@/components/cta'
+import Hero from "@/app/(default)/home/hero-home";
+import HomeFooter from "@/app/(default)/home/home-footer";
+import FeaturesSet from "@/app/(default)/home/features-set";
+import HomeFeatureGlobe from "@/app/(default)/home/feature-globe";
+import FeaturesBlocks from "@/app/(default)/home/features-blocks";
+import FeaturesAnimation from "@/app/(default)/home/features-animation";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <FeaturesBlocks />
-      <Features />
-      <Features02 />
-      <Features03 />
-      <Target />
-      {/* <PricingSection /> */}
-      <Cta />
+      <HomeFeatureGlobe />
+      <FeaturesSet />
+      <FeaturesAnimation />
+      <HomeFooter />
     </>
-  )
+  );
 }
