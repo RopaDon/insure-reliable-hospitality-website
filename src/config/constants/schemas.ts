@@ -17,5 +17,5 @@ export const PartnershipSchema = yup.object().shape({
   fullName: yup.string().required("Full Name is required"),
   companyName: yup.string().required("Company Name is required"),
   contactNumber: yup.string().required("Phone Number is required"),
-  partnershipDescription: yup.string().email().required("Short description is required"),
+  partnershipDescription: yup.string().required("Short description is required"),
 });
