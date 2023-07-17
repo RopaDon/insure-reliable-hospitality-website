@@ -1,4 +1,3 @@
-import getAllPosts from "@/lib/getAllPosts";
 import PostItem from "./open-position-item";
 import EmptyDisplay from "@/src/components/empty-display";
 

@@ -4,18 +4,13 @@ Note: This code includes an example of how to fetch data from an external JSON f
 */
 }
 
-import getAllPosts from "@/lib/getAllPosts";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-import Newsletter from "@/src/components/newsletter";
-import OpenPositionItem from "../open-position-item";
-
 export async function generateStaticParams() {
-  const postsData: Promise<Post[]> = getAllPosts();
-  const posts = await postsData;
+  const posts: any[] = [];
 
   return posts.map((post) => ({
     id: post.id.toString(),
@@ -23,8 +18,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { id: number } }): Promise<Metadata> {
-  const postsData: Promise<Post[]> = getAllPosts();
-  const posts = await postsData;
+  const posts: any[] = [];
   const post = posts.find((post) => post.id === Number(params.id));
 
   if (!post) {
@@ -40,8 +34,7 @@ export async function generateMetadata({ params }: { params: { id: number } }): 
 }
 
 export default async function SinglePost({ params }: { params: { id: number } }) {
-  const postsData: Promise<Post[]> = getAllPosts();
-  const posts = await postsData;
+  const posts: any[] = [];
   const post = posts.find((post) => post.id === Number(params.id));
 
   if (!post) {
